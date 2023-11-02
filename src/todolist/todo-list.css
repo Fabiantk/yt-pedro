@@ -1,0 +1,89 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+
+}
+
+.addTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0px;
+  left: 150px;
+  right: 0;
+
+  background-color: lightblue;
+  padding: 40px;
+  z-index: 100;
+
+}
+
+.addTask button, 
+.addTask input {
+  border: 1px solid black;
+  font-size: 16px;
+
+}
+
+.addTask button {
+  min-width: 80px;
+}
+
+
+.tasklist {
+
+
+  
+
+}
+
+.task {
+  display: grid;
+  position: relative;
+
+  grid-template-columns: 3fr 1fr;;
+
+  border-bottom: 1px solid black;
+  padding: 20px 20px 20px 0px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.taskName {
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+.task .buttons {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  align-items: end;
+
+  box-sizing: content-box;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+
+#del-btn {
+  background-color: rgb(249, 80, 80);
+  color: white;
+  border: none;
+  border-radius:  15px;
+  padding: 4px 15px;
+}
+
+button, input[type="checkbox"] {
+  cursor: pointer;
+}
