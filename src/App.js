@@ -4,29 +4,29 @@ import Home from "./Home";
 import TodoList from "./todolist/TodoList";
 import RockPaperScissors from "./rock-paper-scissors/RockPaperScissors";
 import TicTacToe from "./tic-tac-toe/TicTacToe";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { Sidebar } from './Sidebar';
-import { DataFetching } from './fetching-data/DataFetching';
-import { CatFact } from './fetching-data/catFacts/CatFact';
+import { ReactRouter } from './react-router/ReactRouter';
+import { NotFound } from "./react-router/pages/NotFound";
+import { FetchingDataRoutes } from './fetching-data/FetchingDataRoutes'
+import { BookRoutes } from './react-router/BookRoutes';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />}>
-            redirect("/todolist")
-          </Route>
-          <Route path="/todolist" element={<TodoList />}></Route>
-          <Route path="/tic-tac-toe" element={<TicTacToe />}></Route>
-          <Route
-            path="/rock-paper-scissors"
-            element={<RockPaperScissors />}></Route>
-          <Route path="/data-fetching" element={<DataFetching />}></Route>
-          <Route path="/data-fetching/cat-facts" element={<CatFact />}></Route>
-        </Routes>
-      </Router>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/todolist" element={<TodoList />} />
+        <Route path="/tic-tac-toe" element={<TicTacToe />} />
+        <Route path="/rock-paper-scissors" element={<RockPaperScissors />} />
+        <Route path="/data-fetching/*" element={<FetchingDataRoutes />} />
+        <Route path="/react-router">
+          <Route index element={<ReactRouter />} />
+          <Route path="books/*" element={<BookRoutes />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

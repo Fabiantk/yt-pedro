@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
-import "./fetching-data.css";
-import axios from "axios";
-import { CatFact } from "./catFacts/CatFact";
-
-import { BrowserRouter as Routes, Route, Link } from 'react-router-dom'
+import styles from "./fetching-data.module.css";
+import { Link, Outlet } from 'react-router-dom'
 
 
 export function DataFetching() {
   return (
-    <div className="fetching-data">
+    <div className={styles.fetchingData}>
       <h1>Fetching Data</h1>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Outlet />
     </div>
   );
 }
@@ -18,7 +15,15 @@ export function DataFetching() {
 function Navbar(){
   return (
     <div>
-      <Link to="/data-fetching/cat-facts">Cat Facts</Link>
+      <Link className={styles.link} to="/data-fetching">
+        Home
+      </Link>
+      <Link className={styles.link} to="/data-fetching/cat-facts">
+        Cat Facts
+      </Link>
+      <Link className={styles.link} to="/data-fetching/predict-age">
+        Age Predictor
+      </Link>
     </div>
   );
 }

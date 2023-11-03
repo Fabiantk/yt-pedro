@@ -17,7 +17,7 @@ export function CatFact() {
 
   return (
     <div className="catFacts">
-      <h1>Cat Facts</h1>
+      <h2>Cat Facts</h2>
       <button onClick={getCatFact}>Generate Cat Fact</button>
       <div> {catFact} </div>
     </div>

@@ -17,18 +17,11 @@ export function Sidebar() {
         Rock Paper Scissors
       </Link>
       <Link className={styles.link} to="/data-fetching">
-        {" "}
-        Fetching Data{" "}
+        Fetching Data
       </Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
-      <Link className={styles.link}></Link>
+      <Link className={styles.link} to="/react-router">
+        React Router
+      </Link>
     </header>
   );
 }
