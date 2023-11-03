@@ -1,22 +1,22 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import "./react-router.css";
 
 export function BookLayout() {
   return (
     <div>
-      <div className="links">
-        <Link className="link" to="/react-router/books/">Home</Link>
-        <Link className="link" to="/react-router/books/1">
+      <div className="book-links">
+        <NavLink className="link" to="/react-router/books/">Home</NavLink>
+        <NavLink className="link" to="/react-router/books/1">
           Book 1
-        </Link>
-        <Link className="link" to="/react-router/books/2">
+        </NavLink>
+        <NavLink className="link" to="/react-router/books/2">
           Book 2
-        </Link>
-        <Link className="link" to="/react-router/books/new">
+        </NavLink>
+        <NavLink className="link" to="/react-router/books/new">
           New Book
-        </Link>
+        </NavLink>
       </div>
-      <Outlet />
+      <Outlet context={{hello: "Hello World"}}/>
     </div>
   );
 }

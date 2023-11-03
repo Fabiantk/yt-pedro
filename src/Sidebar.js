@@ -1,27 +1,27 @@
-import { Link } from "react-router-dom";
-import styles from "./sidebar.module.css";
+import { Link, NavLink } from "react-router-dom";
+import "./sidebar.css";
 
 export function Sidebar() {
   return (
-    <header className={styles.header}>
-      <Link className={styles.link} to="/">
+    <div className="sidebar">
+      <NavLink className="link" to="/">
         Home
-      </Link>
-      <Link className={styles.link} to="/todolist">
+      </NavLink>
+      <NavLink className="link" to="/todolist">
         TodoList
-      </Link>
-      <Link className={styles.link} to="/tic-tac-toe">
+      </NavLink>
+      <NavLink className="link" to="/tic-tac-toe">
         TicTacToe
-      </Link>
-      <Link className={styles.link} to="/rock-paper-scissors">
+      </NavLink>
+      <NavLink className="link" to="/rock-paper-scissors">
         Rock Paper Scissors
-      </Link>
-      <Link className={styles.link} to="/data-fetching">
+      </NavLink>
+      <NavLink className="link" to="/data-fetching">
         Fetching Data
-      </Link>
-      <Link className={styles.link} to="/react-router">
+      </NavLink>
+      <NavLink className="link" to="/react-router">
         React Router
-      </Link>
-    </header>
+      </NavLink>
+    </div>
   );
 }
