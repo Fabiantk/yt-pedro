@@ -6,11 +6,22 @@
   justify-content: center;
 }
 
-.links, 
-.book-links {
+.links {
   display: flex;
   justify-content: center;
   column-gap: 15px;
+}
+
+.book-links {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-left: 20px;
+  row-gap: 10px;
+}
+
+.book-links .link:hover {
+  color: rgb(181, 0, 0);
 }
 
 .link {

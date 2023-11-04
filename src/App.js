@@ -10,6 +10,7 @@ import { ReactRouter } from './react-router/ReactRouter';
 import { NotFound } from "./react-router/pages/NotFound";
 import { FetchingDataRoutes } from './fetching-data/FetchingDataRoutes'
 import { BookRoutes } from './react-router/BookRoutes';
+import { SearchExample } from './react-router/SearchExample';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/react-router">
           <Route index element={<ReactRouter />} />
           <Route path="books/*" element={<BookRoutes />} />
+          <Route path="search-example" element={<SearchExample />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
